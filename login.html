@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - RentHome</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+.login-container{
+    max-width:420px;
+    margin:80px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.login-container h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#0a66ff;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.login-btn:hover{
+    background:#004ecc;
+}
+
+.text{
+    text-align:center;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">🏠 RentHome</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-property.html">Add Property</a>
+    </nav>
+</header>
+
+<div class="login-container">
+
+<h2>Login</h2>
+
+<form id="loginForm">
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" required>
+</div>
+
+<button class="login-btn">Login</button>
+
+<p class="text">
+Don't have an account?
+<a href="register.html">Register</a>
+</p>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Login system will be connected with Firebase.");
+
+});
+</script>
+
+</body>
+</html>
