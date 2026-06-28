@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+  <script>
+const search = document.querySelector(".search");
+const cards = document.querySelectorAll(".card");
+
+search.addEventListener("keyup", function () {
+    const value = search.value.toLowerCase();
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
 body{
 font-family:Arial;
 margin:0;
