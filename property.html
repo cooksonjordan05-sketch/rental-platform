@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Property - RentHome</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+.form-container{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.form-container h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.submit-btn{
+    width:100%;
+    background:#0a66ff;
+    color:#fff;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+.submit-btn:hover{
+    background:#004ecc;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">🏠 RentHome</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="add-property.html">Add Property</a>
+    </nav>
+</header>
+
+<div class="form-container">
+
+<h2>Add New Property</h2>
+
+<form id="propertyForm">
+
+<div class="form-group">
+<label>Property Title</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label>City</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label>Property Type</label>
+
+<select>
+<option>Apartment</option>
+<option>House</option>
+<option>Villa</option>
+<option>Studio</option>
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Monthly Rent ($)</label>
+<input type="number" required>
+</div>
+
+<div class="form-group">
+<label>Image URL</label>
+<input type="url" placeholder="https://example.com/image.jpg">
+</div>
+
+<div class="form-group">
+<label>Description</label>
+<textarea></textarea>
+</div>
+
+<button class="submit-btn">
+Add Property
+</button>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("propertyForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Property Added Successfully! (Database will be connected later)");
+
+});
+</script>
+
+</body>
+</html>
